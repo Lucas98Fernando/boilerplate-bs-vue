@@ -1,7 +1,8 @@
 <template>
   <section>
     <h1>View home</h1>
-    <BaseButton variant="danger" text="Botão" to="/about"></BaseButton>
+    <BaseButton variant="danger" text="Botão" @click="sayHello()"></BaseButton>
+    <BaseButton variant="danger" text="Botão" @click="sayHi()"></BaseButton>
     <BaseInput placeholder="Digite algo" v-model="nome"></BaseInput>
     <BaseInput placeholder="Digite algo" v-model="idade"></BaseInput>
   </section>
@@ -21,6 +22,15 @@ export default {
       nome: "Nome",
       idade: "Idade",
     };
+  },
+  methods: {
+    sayHello() {
+      console.log("Olá !!!");
+    },
+
+    sayHi() {
+      console.log("Oii !!!");
+    },
   },
 };
 </script>

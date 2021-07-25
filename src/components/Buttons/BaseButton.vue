@@ -1,7 +1,12 @@
 <template>
-  <b-button :variant="variant" :text="text" :type="type" :to="to">{{
-    text
-  }}</b-button>
+  <b-button
+    :variant="variant"
+    :text="text"
+    :type="type"
+    :to="to"
+    @click="$emit('click', $event.target.value)"
+    >{{ text }}</b-button
+  >
 </template>
 
 <script>
